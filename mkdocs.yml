@@ -1,0 +1,119 @@
+site_name: Bare Minimum Docs  # Name of the website
+
+theme:  # Theme settings
+  name: material  # Name of the theme (material design)
+  features:  # List of features enabled for the theme
+    - navigation.instant  # Instant navigation
+    - search.suggest  # Search suggestions
+    - search.highlight  # Highlight search results
+    - search.share  # Share search results
+    - navigation.instant  # Instant navigation (again, possibly a duplicate)
+    - navigation.indexes  # Navigation indexes
+    - navigation.expand  # Expandable navigation
+    - navigation.top  # Top navigation
+    - navigation.instant.prefetch  # Prefetching for instant navigation
+    - navigation.instant.progress  # Progress indicator for instant navigation
+    - navigation.instant.preview  # Preview for instant navigation
+    - navigation.tracking  # Navigation tracking
+    - navigation.tabs  # Navigation tabs
+    - navigation.sections  # Navigation sections
+    - header.autohide  # Automatically hide the header
+    - navigation.footer  # Footer navigation
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.code.select
+    - content.tooltips
+  palette:  # Color palette settings
+    - scheme: slate  # Color scheme name
+      primary: indigo  # Primary color
+      accent: blue  # Accent color
+      toggle:  # Toggle settings for light/dark mode switch
+        icon: material/brightness-4  # Icon for dark mode toggle
+        name: Switch to light mode  # Text for dark mode toggle
+    - scheme: default  # Default color scheme
+      primary: indigo  # Primary color
+      accent: blue  # Accent color
+      toggle:  # Toggle settings for light/dark mode switch
+        icon: material/brightness-7  # Icon for light mode toggle
+        name: Switch to dark mode  # Text for light mode toggle
+
+  favicon: assets/favicon.png  # Path to the favicon
+  icon:
+    logo: octicons/accessibility-16  # Logo icon
+  language: en  # Language setting for the website
+  font:  # Font settings
+    text: Fira Sans  # Font for regular text
+    code: Fira Mono  # Font for code blocks
+
+markdown_extensions:  # Markdown extensions/settings
+    - admonition  # Allow admonitions in Markdown
+    - attr_list  # Allow attribute lists in Markdown
+    - md_in_html
+    - pymdownx.betterem
+    - pymdownx.details
+    - pymdownx.caret
+    - pymdownx.mark
+    - pymdownx.tasklist:  # Enable task lists in Markdown
+        custom_checkbox: true  # Custom checkbox style
+    - pymdownx.details  # Enable details/summary in Markdown
+    - pymdownx.keys  # Enable keyboard shortcuts in Markdown
+    - pymdownx.arithmatex:  # Enable math rendering in Markdown
+        generic: true  # Use generic LaTeX mode
+    - pymdownx.highlight:  # Enable syntax highlighting in Markdown
+        anchor_linenums: true  # Add anchor links to line numbers
+        line_spans: --span
+        pygments_lang_class: true
+    - pymdownx.inlinehilite  # Enable inline code highlighting
+    - pymdownx.snippets  # Enable code snippets in Markdown
+    - footnotes  # Enable footnotes in Markdown
+    - pymdownx.superfences:  # Enable custom fenced code blocks in Markdown
+        custom_fences:  # Define custom fences
+          - name: mermaid  # Name of custom fence
+            class: mermaid  # CSS class for custom fence
+            format: !!python/name:pymdownx.superfences.fence_code_format  # Format for custom fence
+    - pymdownx.tabbed:  # Enable tabbed sections in Markdown
+        alternate_style: true  # Use alternate style for tabs
+    - toc:  # Enable table of contents in Markdown
+        permalink: true  # Add permalinks to TOC
+    - pymdownx.emoji:  # Enable emoji support in Markdown
+        emoji_index: !!python/name:materialx.emoji.twemoji  # Emoji index
+        emoji_generator: !!python/name:materialx.emoji.to_svg  # Emoji generator
+    - pymdownx.tilde  # Enable strike-through syntax using ~~~
+    - pymdownx.critic  # Enable Critic Markup syntax in Markdown
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: timeago
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - custom-skip-class-name
+      auto_caption: false
+      caption_position: bottom
+      background: white
+      shadow: true
+nav:
+   - Home:
+       - index.md
+       - fabric-events.md
+   - Data Attributes:
+       - data-attributes/home.md
+       - data-attributes/datapack-setup.md
+       - data-attributes/stacking-behavior.md
+       - data-attributes/overrides.md
+       - data-attributes/entity-types.md
+       - data-attributes/attribute-functions.md
+       - data-attributes/attribute-properties.md
+       - data-attributes/api.md
