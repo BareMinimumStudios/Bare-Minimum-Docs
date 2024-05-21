@@ -46,16 +46,23 @@ theme:  # Theme settings
   font:  # Font settings
     text: Fira Sans  # Font for regular text
     code: Fira Mono  # Font for code blocks
-  copyright: "Documentation by <a style=\"color: #13A6F0;\" href=\"https://github.com/gliscowo\">glisco</a>, with assistance from the Wisp Forest team"
+
+copyright: "Documentation by <a style=\"color: #13A6F0;\" href=\"https://github.com/pokesmells\">Poke</a>, with assistance from the Bare Minimum Team."
+
+projects:
+      docs:
+          repo: https://github.com/BareMinimumStudios/Bare-Minimum-Docs
+          name: Bare Minimum Docs
+      playerex:
+          repo: https://github.com/pokesmells/playerex
+          name: PlayerEx
 extra:
   social:
     - icon: fontawesome/brands/discord
       link: https://discord.com/invite/pcRw79hwey
     - icon: fontawesome/brands/github
       link: https://github.com/PlayerEXDirectorsCut
-repo_name: Bare Mininum Docs/docs
-repo_url: https://github.com/PlayerEXDirectorsCut/Bare-Minimum-Docs
-copyright: Made by Poke and the Bare Minimum Studio Team.
+
 markdown_extensions:  # Markdown extensions/settings
     - admonition  # Allow admonitions in Markdown
     - attr_list  # Allow attribute lists in Markdown
@@ -91,14 +98,17 @@ markdown_extensions:  # Markdown extensions/settings
         emoji_generator: !!python/name:materialx.emoji.to_svg  # Emoji generator
     - pymdownx.tilde  # Enable strike-through syntax using ~~~
     - pymdownx.critic  # Enable Critic Markup syntax in Markdown
+
 extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 plugins:
-  - search
+  - search:
   - git-revision-date-localized:
       type: timeago
+  - tags    
   - glightbox:
       touchNavigation: true
       loop: false
@@ -114,6 +124,7 @@ plugins:
       caption_position: bottom
       background: white
       shadow: true
+
 nav:
    - Home:
        - index.md

@@ -1,0 +1,3 @@
+[mkdocs.plugins]
+multirepo=mkdocs_multirepo_plugin.plugin:MultirepoPlugin
+
