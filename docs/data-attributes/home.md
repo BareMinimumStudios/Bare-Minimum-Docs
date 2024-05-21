@@ -9,6 +9,9 @@ project: data-attributes
 <br> -->
 
 # Data Attributes
+
+![data attributes banner](../../assets/data-attributes/banner.png)
+
 !!! abstract ""
     #### What is Data Attributes?
     Initially released for Minecraft 1.17.1 via the Fabric ecosystem, serves two main purposes: it revamps Minecraft's entity attribute system to be more flexible and inclusive of follow-on attributes, a feature common in many other games. Additionally, it enables the manipulation of entity attributes through datapacks, offering server and pack creators straightforward customization of every facet of the entity attribute system.

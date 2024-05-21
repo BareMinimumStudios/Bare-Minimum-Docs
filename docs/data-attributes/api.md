@@ -7,7 +7,26 @@ project: data-attributes
 
 Data Attributes includes an API package, located at `com.github.clevernucleus.dataattributes.api` and contains the following:
 
- ![data structure example](../../assets/data-attributes/file-structure2.png)
+```
+📂api
+ ┣📂attribute
+ ┃ ┣📄AdditionFunction.java interface
+ ┃ ┣📄AttributeBehaviour.java enum
+ ┃ ┣📄AdditionFunction.java interface
+ ┃ ┣📄IAttribute.java interface
+ ┃ ┣📄IAttributeFunction.java interface
+ ┃ ┗📄IEntityAttributeModifier.java interface
+ ┃
+ ┣📂event
+ ┃ ┣📂client
+ ┃ ┃ ┗📄ClientSyncedEvent.java class
+ ┃ ┃
+ ┃ ┣📄EntityAttributeEvents.java class
+ ┃ ┣📄MathClampEvent.java class
+ ┃ ┗📄ServerSyncedEvent.java class
+ ┃
+ ┗📄API.java class
+```
 
 - ### API Content
 

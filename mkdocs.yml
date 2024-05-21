@@ -24,6 +24,7 @@ theme:  # Theme settings
     - content.code.copy
     - content.code.select
     - content.tooltips
+    - projects
   palette:  # Color palette settings
     - scheme: slate  # Color scheme name
       primary: indigo  # Primary color
@@ -45,7 +46,16 @@ theme:  # Theme settings
   font:  # Font settings
     text: Fira Sans  # Font for regular text
     code: Fira Mono  # Font for code blocks
-
+  copyright: "Documentation by <a style=\"color: #13A6F0;\" href=\"https://github.com/gliscowo\">glisco</a>, with assistance from the Wisp Forest team"
+extra:
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/invite/pcRw79hwey
+    - icon: fontawesome/brands/github
+      link: https://github.com/PlayerEXDirectorsCut
+repo_name: Bare Mininum Docs/docs
+repo_url: https://github.com/PlayerEXDirectorsCut/Bare-Minimum-Docs
+copyright: Made by Poke and the Bare Minimum Studio Team.
 markdown_extensions:  # Markdown extensions/settings
     - admonition  # Allow admonitions in Markdown
     - attr_list  # Allow attribute lists in Markdown
@@ -117,3 +127,9 @@ nav:
        - data-attributes/attribute-functions.md
        - data-attributes/attribute-properties.md
        - data-attributes/api.md
+   - PlayerEx:
+       - playerex/home.md
+       - playerex/faq.md
+       - playerex/in-game-content.md
+       - playerex/textplaceholderapi.md
+       - playerex/api.md

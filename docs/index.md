@@ -1,17 +1,17 @@
-# Welcome to MkDocs
+---
+title: Home
+project: docs
+summary: The Bare Minimum Docs Hub
+---
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# Welcome to the Bare Minimum Docs!
 
-## Commands
+![bare minimum banner](assets/bmheader2.png){ .center-image .sized-image style="--image-width: 65%; margin-top: -3em;" }
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+### For Users
 
-## Project layout
+- This is currently work in progress!
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+### For Developers
+
+- Also under construction!

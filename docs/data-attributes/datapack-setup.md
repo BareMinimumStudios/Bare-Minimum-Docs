@@ -16,4 +16,15 @@ By default, nothing exists in this directory, as all json data is optional. Howe
 
 This takes the form shown below:
 
- ![datapack structure example](../../assets/data-attributes/file-structure.png)
+```
+📂data
+ ┗📂<namespace>
+   ┗📂attributes
+     ┣📂overrides
+     ┃ ┣📄attribute_name.json
+     ┃ ┗...
+     ┃
+     ┣📄entity_types.json
+     ┣📄functions.json
+     ┗📄properties.json
+``` 
