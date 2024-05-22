@@ -21,7 +21,7 @@ $$y=\min{(v\times u\times (x-i)-v\times \sin{(u\times (x-i))}+j}{,m)}$$
 When plotting this as a graph, $x$ is the player's current PlayerEx level, and $y$ is how many experience vanilla levels is needed to get to the next PlayerEx level.
 
 <figure markdown="span">
- ![levelling example](../../assets/playerex/levelgraph.png)
+ ![levelling example](../assets/playerex/levelgraph.png)
 <figcaption>The default levelling formula.</figcaption>
 </figure>
 

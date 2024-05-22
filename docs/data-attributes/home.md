@@ -10,7 +10,7 @@ project: data-attributes
 
 # Data Attributes
 
-![data attributes banner](../../assets/data-attributes/banner.png)
+![data attributes banner](../assets/data-attributes/data-attributes-banner.png)
 
 !!! abstract ""
     #### What is Data Attributes?
@@ -98,7 +98,7 @@ However, default attribute containers are immutable, as previously mentioned. Th
 - #### Attribute Hierarchy
 
 <figure markdown="span">
-![attribute hierarchy example](../../assets/data-attributes/attribute-hierarchy.png)
+![attribute hierarchy example](../assets/data-attributes/attribute-hierarchy.png)
 <figcaption>Diagram of how components relate to create the attributes system.</figcaption>
 </figure>
 

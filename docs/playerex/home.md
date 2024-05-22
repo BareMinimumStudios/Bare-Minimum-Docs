@@ -10,7 +10,7 @@ project: playerex
 
 # PlayerEx
 
-![playerex banner](../../assets/playerex/banner1.png)
+![playerex banner](../assets/playerex/playerex-banner.png)
 
 !!! abstract ""
     `PlayerEx` is a Minecraft mod built using the Fabric ecosystem that adds `RPG themed` attributes to the game and the player.

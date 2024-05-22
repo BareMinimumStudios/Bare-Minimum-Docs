@@ -52,12 +52,12 @@ project: playerex
 The latter of which allow the player to view their attributes and spend skill points to level up and increase certain attributes. These have an RPG theme.
 
 <figure markdown="span">
- ![GUI Example 1](../../assets/playerex/gui.png)
+ ![GUI Example 1](../assets/playerex/gui.png)
 <figcaption>Added on inventory tabs and the main levelling tab.</figcaption>
 </figure>
 
 <figure markdown="span">
- ![GUI Example 2](../../assets/playerex/gui1.png)
+ ![GUI Example 2](../assets/playerex/gui1.png)
 <figcaption>The Added on WizardEx Tab and the Combat Stat page. These can be also accesed with the R keybind.</figcaption>
 </figure>
 
@@ -91,4 +91,4 @@ Most of PlayerEx's configurability is provided by `Data Attributes` in the form 
 | `/playerex skillAttribute <player> <attribute> <requires skill points>` | Skills the input attribute, provided the player has a Skill Point available if the final boolean argument is true, or regardless otherwise. |
 | `/playerex refundAttribute <player> <attribute> <requires refund points>` | Refunds the input attribute, provided the player has a Refund Point available if the final boolean argument is true, or regardless otherwise. |
 
-!!! note "Also see commands available with [Offline Player Cache](opc-1.18.2_home#commands), which is included with PlayerEx."
+!!! note "Also see commands available with [Offline Player Cache](../opc/home.md/#commands), which is included with PlayerEx."

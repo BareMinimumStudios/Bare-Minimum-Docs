@@ -18,6 +18,6 @@ project: playerex
 
 When a player leaves a world `(disconnects)`, PlayerEx caches that player's `UUID`, `Name` and `Level`. These values are used by the server when providing placeholders for offline players, whereas for online players the current/life value is provided instead of the cached one. Upon joining a world (reconnecting) that player's cache is removed and their current/live values are used once again.
 
-This offline caching functionality is provided by [Offline Player Cache](opc-1.18.2_home) - a lighweight library/API mod. PlayerEx ships with it included (jar-in-jar). There may be circumstances where a player has quit a world/server but their cache is still there. To remove their cache, or even just their cached `Name` or `Level`, please see [here](opc-1.18.2_home#commands).
+This offline caching functionality is provided by [Offline Player Cache](../opc/home.md) - a lighweight library/API mod. PlayerEx ships with it included (jar-in-jar). There may be circumstances where a player has quit a world/server but their cache is still there. To remove their cache, or even just their cached `Name` or `Level`, please see [here](../opc/home.md/#commands).
 
 Also see [Text Placeholder API](https://github.com/Patbox/TextPlaceholderAPI)

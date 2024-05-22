@@ -1,46 +1,48 @@
-site_name: Bare Minimum Docs  # Name of the website
+site_name: Bare Minimum Docs  
 site_url: https://bareminimumstudios.github.io/Bare-Minimum-Docs/
 site_description: 'Bare Minimum Wiki'
 
-theme:  # Theme settings
-  name: null  # Name of the theme (material design)
+theme:  
+  name: null  
   custom_dir: mkdocs-material/material
-  features:  # List of features enabled for the theme
-    - navigation.instant  # Instant navigation
-    - search.suggest  # Search suggestions
-    - search.highlight  # Highlight search results
-    - search.share  # Share search results
-    - navigation.instant  # Instant navigation (again, possibly a duplicate)
-    - navigation.indexes  # Navigation indexes
-    - navigation.expand  # Expandable navigation
-    - navigation.top  # Top navigation
-    - navigation.instant.prefetch  # Prefetching for instant navigation
-    - navigation.instant.progress  # Progress indicator for instant navigation
-    - navigation.instant.preview  # Preview for instant navigation
-    - navigation.tracking  # Navigation tracking
-    - navigation.tabs  # Navigation tabs
-    - navigation.sections  # Navigation sections
-    - header.autohide  # Automatically hide the header
-    - navigation.footer  # Footer navigation
+
+  features:  
+    - navigation.instant  
+    - search.suggest  
+    - search.highlight  
+    - search.share  
+    - navigation.instant  
+    - navigation.indexes  
+    - navigation.expand  
+    - navigation.top  
+    - navigation.instant.prefetch  
+    - navigation.instant.progress  
+    - navigation.instant.preview  
+    - navigation.tracking  
+    - navigation.tabs  
+    - navigation.sections  
+    - header.autohide  
+    - navigation.footer  
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
     - content.code.select
     - content.tooltips
 
-  palette:  # Color palette settings
-    - scheme: slate  # Color scheme name
-      primary: indigo  # Primary color
-      accent: blue  # Accent color
-      toggle:  # Toggle settings for light/dark mode switch
-        icon: material/brightness-4  # Icon for dark mode toggle
-        name: Switch to light mode  # Text for dark mode toggle
-    - scheme: default  # Default color scheme
-      primary: indigo  # Primary color
-      accent: blue  # Accent color
-      toggle:  # Toggle settings for light/dark mode switch
-        icon: material/brightness-7  # Icon for light mode toggle
-        name: Switch to dark mode  # Text for light mode toggle
+  palette: 
+    - scheme: slate  
+      primary: indigo  
+      accent: blue  
+      toggle:  
+        icon: material/brightness-4  
+        name: Switch to light mode 
+
+    - scheme: default  
+      primary: indigo  
+      accent: blue  
+      toggle:  
+        icon: material/brightness-7  
+        name: Switch to dark mode  
 
   favicon: assets/favicon.png  # Path to the favicon
   icon:
@@ -57,17 +59,20 @@ extra:
     - icon: fontawesome/brands/discord
       link: https://discord.com/invite/pcRw79hwey
     - icon: fontawesome/brands/github
-      link: https://github.com/PlayerEXDirectorsCut
+      link: https://github.com/BareMinimumStudios
   projects:
       docs:
           repo: https://github.com/BareMinimumStudios/Bare-Minimum-Docs
-          name: Bare Minimum Docss
+          name: Bare Minimum Docs
       playerex:
           repo: https://github.com/BareMinimumStudios/playerex
           name: PlayerEx
       data-attributes:
           repo: https://github.com/BareMinimumStudios/data-attributes
-          name: Data Attributes    
+          name: Data Attributes
+      opc:
+         repo: https://github.com/BareMinimumStudios/Offline-Player-Cache
+         name: Offline Player Cache       
 
 markdown_extensions:  # Markdown extensions/settings
     - admonition  # Allow admonitions in Markdown
@@ -109,15 +114,9 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-  - javascripts/extra.js
-
-extra_css:
-  - stylesheets/extra.css
 
 plugins:
-  - search:
-      lang: en
-      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - search
   - git-revision-date-localized:
       type: timeago 
   - glightbox:
@@ -155,3 +154,7 @@ nav:
        - playerex/in-game-content.md
        - playerex/textplaceholderapi.md
        - playerex/api.md
+   - Offline Player Cache:
+       - opc/home.md
+       - opc/cacheablevalue.md
+       - opc/api.md

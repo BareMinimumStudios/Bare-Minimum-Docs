@@ -26,7 +26,7 @@ Firstly, it is important to differentiate between the two subsets of diminishing
 The difference is subtle, but it boils down to whether the addition was from multiple different sources or not. What are different sources? An example of different sources is Iron Boots providing `+2 Armor`, and an Iron Chestplate providing `+6 Armor`.
 
 <figure markdown="span">
- ![diminishing example](../../assets/data-attributes/diminishing.png)
+ ![diminishing example](../assets/data-attributes/diminishing.png)
 <figcaption>Diminishing addition always encompasses diminishing stacking, but the reverse is not true.</figcaption>
 </figure>
 
@@ -37,7 +37,7 @@ $$ f(a,b)=f(b,a) $$
 `Reversibility` here refers to how the addition function handles negative numbers. For example, given two numbers `𝒂 and 𝒃` add together to produce `𝒄`, either input subtracted from `𝒄` should result in the other input. This may seem obvious at first, but this is actually a substantial hurdle in creating a working diminishing attributes system, as often the `addition function` cannot or does not consider negative numbers.
 
 <figure markdown="span">
-![triangle example](../../assets/data-attributes/triangle.png)
+![triangle example](../assets/data-attributes/triangle.png)
 <figcaption>Adding a and b produces c, just as subtracting a from c produces b.</figcaption>
 </figure>
 
