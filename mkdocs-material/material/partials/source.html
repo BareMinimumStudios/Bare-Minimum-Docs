@@ -1,0 +1,12 @@
+{#-
+  This file was automatically generated - do not edit
+-#}
+<a href="{{ config.extra.projects[page.meta.project].repo }}" title="{{ lang.t('source.link.title') }}" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+   {% set icon = config.theme.icon.repo or "fontawesome/brands/github" %}
+   {% include ".icons/" ~ icon ~ ".svg" %}
+  </div>
+  <div class="md-source__repository">
+    {{ config.extra.projects[page.meta.project].repo.replace('https://github.com/', '') }}
+  </div>
+</a>

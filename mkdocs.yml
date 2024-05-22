@@ -1,7 +1,10 @@
 site_name: Bare Minimum Docs  # Name of the website
+site_url: https://bareminimumstudios.github.io/Bare-Minimum-Docs/
+site_description: 'Bare Minimum Wiki'
 
 theme:  # Theme settings
-  name: material  # Name of the theme (material design)
+  name: null  # Name of the theme (material design)
+  custom_dir: mkdocs-material/material
   features:  # List of features enabled for the theme
     - navigation.instant  # Instant navigation
     - search.suggest  # Search suggestions
@@ -24,7 +27,7 @@ theme:  # Theme settings
     - content.code.copy
     - content.code.select
     - content.tooltips
-    - projects
+
   palette:  # Color palette settings
     - scheme: slate  # Color scheme name
       primary: indigo  # Primary color
@@ -49,19 +52,22 @@ theme:  # Theme settings
 
 copyright: "Documentation by <a style=\"color: #13A6F0;\" href=\"https://github.com/pokesmells\">Poke</a>, with assistance from the Bare Minimum Team."
 
-projects:
-      docs:
-          repo: https://github.com/BareMinimumStudios/Bare-Minimum-Docs
-          name: Bare Minimum Docs
-      playerex:
-          repo: https://github.com/pokesmells/playerex
-          name: PlayerEx
 extra:
   social:
     - icon: fontawesome/brands/discord
       link: https://discord.com/invite/pcRw79hwey
     - icon: fontawesome/brands/github
       link: https://github.com/PlayerEXDirectorsCut
+  projects:
+      docs:
+          repo: https://github.com/BareMinimumStudios/Bare-Minimum-Docs
+          name: Bare Minimum Docss
+      playerex:
+          repo: https://github.com/BareMinimumStudios/playerex
+          name: PlayerEx
+      data-attributes:
+          repo: https://github.com/BareMinimumStudios/data-attributes
+          name: Data Attributes    
 
 markdown_extensions:  # Markdown extensions/settings
     - admonition  # Allow admonitions in Markdown
@@ -103,12 +109,17 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/extra.js
+
+extra_css:
+  - stylesheets/extra.css
 
 plugins:
   - search:
+      lang: en
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - git-revision-date-localized:
-      type: timeago
-  - tags    
+      type: timeago 
   - glightbox:
       touchNavigation: true
       loop: false
@@ -122,7 +133,7 @@ plugins:
         - custom-skip-class-name
       auto_caption: false
       caption_position: bottom
-      background: white
+      background: none
       shadow: true
 
 nav:

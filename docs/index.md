@@ -4,7 +4,7 @@ project: docs
 summary: The Bare Minimum Docs Hub
 ---
 
-# Welcome to the Bare Minimum Docs!
+## Welcome to the Bare Minimum Docs!
 
 ![bare minimum banner](assets/bmheader2.png){ .center-image .sized-image style="--image-width: 65%; margin-top: -3em;" }
 
