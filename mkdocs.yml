@@ -7,17 +7,12 @@ theme:
   custom_dir: mkdocs-material/material
 
   features:  
-    - navigation.instant  
     - search.suggest  
     - search.highlight  
-    - search.share  
-    - navigation.instant  
+    - search.share   
     - navigation.indexes  
     - navigation.expand  
     - navigation.top  
-    - navigation.instant.prefetch  
-    - navigation.instant.progress  
-    - navigation.instant.preview  
     - navigation.tracking  
     - navigation.tabs  
     - navigation.sections  
@@ -53,13 +48,19 @@ theme:
     code: Fira Mono  # Font for code blocks
 
 copyright: "Documentation by <a style=\"color: #13A6F0;\" href=\"https://github.com/pokesmells\">Poke</a>, with assistance from the Bare Minimum Team."
-
 extra:
   social:
     - icon: fontawesome/brands/discord
       link: https://discord.com/invite/pcRw79hwey
     - icon: fontawesome/brands/github
       link: https://github.com/BareMinimumStudios
+  analytics:
+      provider: google
+      property: G-KT6JJKSEP1 
+  consent:
+      title: Cookie consent
+      description: >- 
+        We use cookies to recognize your repeat visits and preferences, and to measure the effectiveness of our documentation and how well users find what they need. By consenting, you help us improve our documentation.  
   projects:
       docs:
           repo: https://github.com/BareMinimumStudios/Bare-Minimum-Docs
