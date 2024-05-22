@@ -39,7 +39,7 @@ theme:
         icon: material/brightness-7  
         name: Switch to dark mode  
 
-  favicon: assets/favicon.png  # Path to the favicon
+  favicon: assets/icon.png  # Path to the favicon
   icon:
     logo: octicons/accessibility-16  # Logo icon
   language: en  # Language setting for the website
