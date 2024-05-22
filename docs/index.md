@@ -22,5 +22,3 @@ Welcome to the Bare Minimum Docs!
 ***
 
 The entire site is available on [Github](https://github.com/BareMinimumStudios/Bare-Minimum-Docs), where you can submit additions, corrections, or issues you may find.
-
-<a href="#__consent">Change Cookie Settings</a>

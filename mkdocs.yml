@@ -54,13 +54,6 @@ extra:
       link: https://discord.com/invite/pcRw79hwey
     - icon: fontawesome/brands/github
       link: https://github.com/BareMinimumStudios
-  analytics:
-      provider: google
-      property: G-KT6JJKSEP1 
-  consent:
-      title: Cookie consent
-      description: >- 
-        We use cookies to recognize your repeat visits and preferences, and to measure the effectiveness of our documentation and how well users find what they need. By consenting, you help us improve our documentation.  
   projects:
       docs:
           repo: https://github.com/BareMinimumStudios/Bare-Minimum-Docs
