@@ -3,3 +3,4 @@ docs/javadoc/
 /site/
 
 .vscode/
+/venv

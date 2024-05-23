@@ -1,88 +1,96 @@
 ---
-title: Cacheable Value
+title: CachedPlayerKey
 project: opc
 ---
 
 !!! abstract ""
-    This section details the `content` and `implementation` of the `Cacheable Value interface` from a developer perspective.
+    This section details the `content` and `implementation` of the `CachedPlayerKey` from a developer perspective.
 
-The `Cacheable Value` is a type of `key-wrapper` hybrid. It serves to hold a generic type and provide a value of this type through a key-function map.
+The `CachedPlayerKey` is a type of `key-wrapper` hybrid. It serves to hold a generic type and provide a value of this type through a key-function map.
 
-- #### Structure
+#### Structure
 
-The `CacheableValue` interface accepts a generic argument that represents its data type. For example, `CacheableValue<Integer>` holds an integer value. The interface has the following methods, where `V` denotes its generic type:
+The `CachedPlayerKey` abstract class accepts a generic argument that represents its data type. For example, `CachedPlayerKey<Integer>` holds an `Integer` value. The interface has the following methods, where `V` denotes its generic type provided upon implementation of the class:
 
-| Modifiers and Type | Method/Field and Description |
-| ------------------ | ---------------------------- |
-| `V` | **get**(**ServerPlayerEntity** player) When the player is online, gets the value from the player. When the player disconnects, this is used to cache the value on the server. |
-| `V` | **readFromNbt**(**NbtCompound** tag) Reads the value from nbt. |
-| `void` | **writeToNbt**(**NbtCompound** tag, **Object** value) Writes the value to nbt. |
-| `Identifier` | **id**() Returns this value's 'key': should be in the form `modid:key`. Example: `opc:current_health`. |
+!!! Implementation
 
-- #### Implementation Example
+=== "Fabric"
+    | Returned | Function | Description 
+    | -------- | -------- | ---------- |
+    | **`V?`** | **`get`** | When the player is online, gets the value from the player. When the player disconnects, this is used to cache the value on the server. This may be nullable. |
+    | **`V`** | **`readFromNbt`** | Reads the value from `nbt`. |
+    | **`void`** | **`writeToNbt`** | Writes a value to a `nbt`. |
+    | **`Identifier`** | **`id`** | Returns the key's registered `Identifier`. An example would be `your_mod_id:your_key_name`. |
 
-For every value or piece of data that a mod wishes to cache, they must create a new `CacheableValue` implementation. The following is an example:
+=== "Forge"
+    | Returned | Function | Description 
+    | -------- | -------- | ---------- |
+    | **`V?`** | **`get`** | When the player is online, gets the value from the player. When the player disconnects, this is used to cache the value on the server. This may be nullable. |
+    | **`V`** | **`readFromNbt`** | Reads the value from `nbt`. |
+    | **`void`** | **`writeToNbt`** | Writes a value to a `nbt`. |
+    | **`ResourceLocation`** | **`id`** | Returns the key's registered `ResourceLocation`. An example would be `your_mod_id:your_key_name`. |                                                       |
 
-```java
-import com.github.clevernucleus.opc.api.CacheableValue;
+#### Creating & Registering Your Key
 
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.server.network.ServerPlayerEntity;
-import net.minecraft.util.Identifier;
+For every value or piece of data that a mod wishes to cache, they must implement the `CachedPlayerKey`.
 
-public class CurrentHealthValue implements CacheableValue<Float> {
-    private final Identifier id;
+The following implementation goes through the process in creating a theoretical `LevelKey`.
 
-    public CurrentHealthValue() {
-        this.id = new Identifier("opc:current_health");
+!!! Example
+=== "Fabric"
+    ```kotlin
+    import com.bibireden.opc.api.CachedPlayerKey
+    import net.minecraft.nbt.NbtCompound
+    import net.minecraft.server.network.ServerPlayerEntity
+    import net.minecraft.util.Identifier
+
+    class LevelKey : CachedPlayerKey<Int>(Identifier("your-mod-id", "your-key-path")) {
+        override fun get(player: ServerPlayerEntity): Int {
+            // this would be up to the end user's interpretation, so for now, anything will suffice.
+            return 404
+        }
+
+        override fun readFromNbt(tag: NbtCompound): Int {
+            return tag.getInt("level")
+        }
+
+        override fun writeToNbt(tag: NbtCompound, value: Any) {
+            // Due to some limitations, type checking cannot be provided for the second argument, but you can almost safely guarantee this value will be associated with your type-parameter.
+            if (value is Int) tag.putInt("level", value)
+        }
     }
+    ```
+=== "Forge"
+    ```kotlin
+    import com.bibireden.opc.api.CachedPlayerKey
+    import net.minecraft.nbt.CompoundTag
+    import net.minecraft.resources.ResourceLocation
+    import net.minecraft.world.entity.player.Player
 
-    @Override
-    public Float get(ServerPlayerEntity player) {
-        return (float)player.getHealth();
-    }
+    class LevelKey : CachedPlayerKey<String>(ResourceLocation("your-mod-id", "your-key-path")) {
+        override fun get(player: Player): String {
+            // this would be up to the end user's interpretation, so for now, anything will suffice.
+            return "playerex in forge when?"
+        }
 
-    @Override
-    public Float readFromNbt(NbtCompound tag) {
-        return tag.getFloat("CurrentHealth");
-    }
+        override fun readFromNbt(tag: CompoundTag): String {
+            return tag.getString("message")
+        }
 
-    @Override
-    public void writeToNbt(NbtCompound tag, Object value) {
-        tag.putFloat("CurrentHealth", (Float)value);
+        override fun writeToNbt(tag: CompoundTag, value: Any) {
+            tag.putString("message", value as String)
+        }
     }
+    ```
 
-    @Override
-    public Identifier id() {
-        return this.id;
-    }
+Now it's time to register your key! It is ideal you call upon the `OfflinePlayerCacheAPI`'s static `register` function in order to register the key properly.
 
-    @Override
-    public boolean equals(Object obj) {
-        if(this == obj) return true;
-        if(obj == null) return false;
-        if(!(obj instanceof CurrentHealthValue)) return false;
-        
-        CurrentHealthValue currentHealthValue = (CurrentHealthValue)obj;
-        return this.id.equals(currentHealthValue.id);
-    }
-    
-    @Override
-    public int hashCode() {
-        return this.id.hashCode();
-    }
-    
-    @Override
-    public String toString() {
-        return this.id.toString();
-    }
-}
+```kotlin title="ExampleMod.kt"
+val LEVEL_KEY = OfflinePlayerCacheAPI.register(LevelKey())
 ```
 
-- #### Notes
+#### Notes
 
-- It is important that a valid `#equals` method is also implemented, as this is used to differentiate between cacheable values. Note that simply calling `this.id#equals` is not okay here, as this checks that the input is of the type `Identifier`, which it is not.
+- If you are needing to check for equality between your derived class, you can override the `equals` method. This is left to you to implement yourself, we do not guarantee the equality of your instances as it is user-dependent on how you wish to go about that.
 
-- This implementation will cache players' current health when they disconnect, and provide this value if they are offline, or the *current* current health if they are online.
-
-- You should try to ensure that the appropriate type is used in your generic. In the example above, `Float` is used because the return type of `player#getHealth` is `float`. Using `Integer` here would not be appropriate as you would lose data, and using `Double` here would also not be appropriate because the extra precision is not utilised.
+- You should try to ensure that the appropriate type is used in your generic. In the example above, `Float` is used because the return type of `player#getHealth` is a `Float`. Using `Integer` here would not be appropriate as you would lose data, and using `Double` here would also not be appropriate because the extra precision is not utilised.
