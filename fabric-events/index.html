@@ -1,0 +1,1799 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Bare Minimum Wiki">
+      
+      
+      
+        <link rel="canonical" href="https://bareminimumstudios.github.io/Bare-Minimum-Docs/fabric-events/">
+      
+      <link rel="icon" href="../assets/icon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-8.5.6">
+      
+        
+        <meta content="Fabric API Events" property="og:title">
+        <meta content="Bare Minimum Studios" property="og:site_name">
+        
+          <meta content="All events currently in Fabric API" property="og:description">
+        
+	      
+          <meta content="https://bareminimumstudios.github.io/Bare-Minimum-Docs/assets/icon.png" property="og:image">
+	      
+      
+    
+    
+      
+        <title>Fabric API Events - Bare Minimum Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300,300i,400,400i,700,700i%7CFira+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Fira Sans";--md-code-font:"Fira Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/timeago.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: none; }</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fabric-api-events" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Bare Minimum Docs" class="md-header__button md-logo" aria-label="Bare Minimum Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M9.923 5.302a3 3 0 1 0-3.847 0A2.713 2.713 0 0 0 5.9 5.5H2A.75.75 0 0 0 2 7h3.3l-.578 5.163-.362 2.997a.75.75 0 1 0 1.49.18L6.132 13h3.736l.282 2.34a.75.75 0 1 0 1.49-.18l-.362-2.997L10.7 7H14a.75.75 0 0 0 0-1.5h-3.899a2.697 2.697 0 0 0-.178-.198zM9.5 3a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-.3 4.073.495 4.427h-3.39l.496-4.427a1.207 1.207 0 0 1 2.398 0z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bare Minimum Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fabric API Events
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/BareMinimumStudios/Bare-Minimum-Docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+   
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BareMinimumStudios/Bare-Minimum-Docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link md-tabs__link--active">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../data-attributes/home/" class="md-tabs__link">
+        Data Attributes
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../playerex/home/" class="md-tabs__link">
+        PlayerEx
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../opc/home/" class="md-tabs__link">
+        Offline Player Cache
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Bare Minimum Docs" class="md-nav__button md-logo" aria-label="Bare Minimum Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M9.923 5.302a3 3 0 1 0-3.847 0A2.713 2.713 0 0 0 5.9 5.5H2A.75.75 0 0 0 2 7h3.3l-.578 5.163-.362 2.997a.75.75 0 1 0 1.49.18L6.132 13h3.736l.282 2.34a.75.75 0 1 0 1.49-.18l-.362-2.997L10.7 7H14a.75.75 0 0 0 0-1.5h-3.899a2.697 2.697 0 0 0-.178-.198zM9.5 3a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-.3 4.073.495 4.427h-3.39l.496-4.427a1.207 1.207 0 0 1 2.398 0z"/></svg>
+
+    </a>
+    Bare Minimum Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/BareMinimumStudios/Bare-Minimum-Docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+   
+   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    BareMinimumStudios/Bare-Minimum-Docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="..">Home</a>
+          
+            <label for="__nav_1">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Fabric API Events
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Fabric API Events
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#grouped-events" class="md-nav__link">
+    Grouped events
+  </a>
+  
+    <nav class="md-nav" aria-label="Grouped events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c2sconfigurationchannelevents" class="md-nav__link">
+    C2SConfigurationChannelEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c2splaychannelevents" class="md-nav__link">
+    C2SPlayChannelEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clientblockentityevents" class="md-nav__link">
+    ClientBlockEntityEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clientchunkevents" class="md-nav__link">
+    ClientChunkEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clientconfigurationconnectionevents" class="md-nav__link">
+    ClientConfigurationConnectionEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cliententityevents" class="md-nav__link">
+    ClientEntityEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clientlifecycleevents" class="md-nav__link">
+    ClientLifecycleEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clientloginconnectionevents" class="md-nav__link">
+    ClientLoginConnectionEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clientplayconnectionevents" class="md-nav__link">
+    ClientPlayConnectionEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clientreceivemessageevents" class="md-nav__link">
+    ClientReceiveMessageEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clientsendmessageevents" class="md-nav__link">
+    ClientSendMessageEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clienttickevents" class="md-nav__link">
+    ClientTickEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entityelytraevents" class="md-nav__link">
+    EntityElytraEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entitysleepevents" class="md-nav__link">
+    EntitySleepEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entitytrackingevents" class="md-nav__link">
+    EntityTrackingEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loottableevents" class="md-nav__link">
+    LootTableEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelloaderplugincontextimpl" class="md-nav__link">
+    ModelLoaderPluginContextImpl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playerblockbreakevents" class="md-nav__link">
+    PlayerBlockBreakEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s2cconfigurationchannelevents" class="md-nav__link">
+    S2CConfigurationChannelEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s2cplaychannelevents" class="md-nav__link">
+    S2CPlayChannelEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screenevents" class="md-nav__link">
+    ScreenEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverblockentityevents" class="md-nav__link">
+    ServerBlockEntityEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverchunkevents" class="md-nav__link">
+    ServerChunkEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverconfigurationconnectionevents" class="md-nav__link">
+    ServerConfigurationConnectionEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverentityevents" class="md-nav__link">
+    ServerEntityEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverentityworldchangeevents" class="md-nav__link">
+    ServerEntityWorldChangeEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverlifecycleevents" class="md-nav__link">
+    ServerLifecycleEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverlivingentityevents" class="md-nav__link">
+    ServerLivingEntityEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverloginconnectionevents" class="md-nav__link">
+    ServerLoginConnectionEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servermessageevents" class="md-nav__link">
+    ServerMessageEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverplayconnectionevents" class="md-nav__link">
+    ServerPlayConnectionEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverplayerevents" class="md-nav__link">
+    ServerPlayerEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servertickevents" class="md-nav__link">
+    ServerTickEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverworldevents" class="md-nav__link">
+    ServerWorldEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worldrenderevents" class="md-nav__link">
+    WorldRenderEvents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-grouped-events" class="md-nav__link">
+    Non-grouped events
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprecated-events" class="md-nav__link">
+    Deprecated events
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Data Attributes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Data Attributes" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Data Attributes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-attributes/home/" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-attributes/datapack-setup/" class="md-nav__link">
+        Datapack & Config Setup
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-attributes/stacking-behavior/" class="md-nav__link">
+        Stacking Formula
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-attributes/overrides/" class="md-nav__link">
+        Overrides
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-attributes/entity-types/" class="md-nav__link">
+        Entity Types
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-attributes/attribute-functions/" class="md-nav__link">
+        Attribute Functions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-attributes/attribute-properties/" class="md-nav__link">
+        Attribute Properties
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-attributes/api/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          PlayerEx
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="PlayerEx" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          PlayerEx
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playerex/home/" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playerex/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playerex/in-game-content/" class="md-nav__link">
+        In-game Content
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playerex/textplaceholderapi/" class="md-nav__link">
+        Text Placeholder API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playerex/api/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Offline Player Cache
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Offline Player Cache" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Offline Player Cache
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../opc/home/" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../opc/cacheablevalue/" class="md-nav__link">
+        CachedPlayerKey
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../opc/api/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#grouped-events" class="md-nav__link">
+    Grouped events
+  </a>
+  
+    <nav class="md-nav" aria-label="Grouped events">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c2sconfigurationchannelevents" class="md-nav__link">
+    C2SConfigurationChannelEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c2splaychannelevents" class="md-nav__link">
+    C2SPlayChannelEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clientblockentityevents" class="md-nav__link">
+    ClientBlockEntityEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clientchunkevents" class="md-nav__link">
+    ClientChunkEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clientconfigurationconnectionevents" class="md-nav__link">
+    ClientConfigurationConnectionEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cliententityevents" class="md-nav__link">
+    ClientEntityEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clientlifecycleevents" class="md-nav__link">
+    ClientLifecycleEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clientloginconnectionevents" class="md-nav__link">
+    ClientLoginConnectionEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clientplayconnectionevents" class="md-nav__link">
+    ClientPlayConnectionEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clientreceivemessageevents" class="md-nav__link">
+    ClientReceiveMessageEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clientsendmessageevents" class="md-nav__link">
+    ClientSendMessageEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clienttickevents" class="md-nav__link">
+    ClientTickEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entityelytraevents" class="md-nav__link">
+    EntityElytraEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entitysleepevents" class="md-nav__link">
+    EntitySleepEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entitytrackingevents" class="md-nav__link">
+    EntityTrackingEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loottableevents" class="md-nav__link">
+    LootTableEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelloaderplugincontextimpl" class="md-nav__link">
+    ModelLoaderPluginContextImpl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#playerblockbreakevents" class="md-nav__link">
+    PlayerBlockBreakEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s2cconfigurationchannelevents" class="md-nav__link">
+    S2CConfigurationChannelEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#s2cplaychannelevents" class="md-nav__link">
+    S2CPlayChannelEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#screenevents" class="md-nav__link">
+    ScreenEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverblockentityevents" class="md-nav__link">
+    ServerBlockEntityEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverchunkevents" class="md-nav__link">
+    ServerChunkEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverconfigurationconnectionevents" class="md-nav__link">
+    ServerConfigurationConnectionEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverentityevents" class="md-nav__link">
+    ServerEntityEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverentityworldchangeevents" class="md-nav__link">
+    ServerEntityWorldChangeEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverlifecycleevents" class="md-nav__link">
+    ServerLifecycleEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverlivingentityevents" class="md-nav__link">
+    ServerLivingEntityEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverloginconnectionevents" class="md-nav__link">
+    ServerLoginConnectionEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servermessageevents" class="md-nav__link">
+    ServerMessageEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverplayconnectionevents" class="md-nav__link">
+    ServerPlayConnectionEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverplayerevents" class="md-nav__link">
+    ServerPlayerEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servertickevents" class="md-nav__link">
+    ServerTickEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverworldevents" class="md-nav__link">
+    ServerWorldEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worldrenderevents" class="md-nav__link">
+    WorldRenderEvents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#non-grouped-events" class="md-nav__link">
+    Non-grouped events
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprecated-events" class="md-nav__link">
+    Deprecated events
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="fabric-api-events">Fabric API Events<a class="headerlink" href="#fabric-api-events" title="Permanent link">&para;</a></h1>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.75 6.5a1.25 1.25 0 1 0 0 2.5 1.25 1.25 0 0 0 0-2.5"/><path d="M2.5 1h8.44a1.5 1.5 0 0 1 1.06.44l10.25 10.25a1.5 1.5 0 0 1 0 2.12l-8.44 8.44a1.5 1.5 0 0 1-2.12 0L1.44 12A1.5 1.5 0 0 1 1 10.94V2.5A1.5 1.5 0 0 1 2.5 1m0 1.5v8.44l10.25 10.25 8.44-8.44L10.94 2.5Z"/></svg></span> Fabric API version: 0.96.11+1.20.4</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5.75 2.5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5m0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5m0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5M2 14a1 1 0 1 1 0-2 1 1 0 0 1 0 2m1-6a1 1 0 1 1-2 0 1 1 0 0 1 2 0M2 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/></svg></span> Total event count: 165</p>
+<h3 id="grouped-events">Grouped events<a class="headerlink" href="#grouped-events" title="Permanent link">&para;</a></h3>
+<hr />
+<h4 id="c2sconfigurationchannelevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-networking-api-v1/src/client/java/net/fabricmc/fabric/api/client/networking/v1/C2SConfigurationChannelEvents.java">C2SConfigurationChannelEvents</a><a class="headerlink" href="#c2sconfigurationchannelevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>REGISTER</li>
+<li>UNREGISTER</li>
+</ul>
+<h4 id="c2splaychannelevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-networking-api-v1/src/client/java/net/fabricmc/fabric/api/client/networking/v1/C2SPlayChannelEvents.java">C2SPlayChannelEvents</a><a class="headerlink" href="#c2splaychannelevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>REGISTER</li>
+<li>UNREGISTER</li>
+</ul>
+<h4 id="clientblockentityevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-lifecycle-events-v1/src/client/java/net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientBlockEntityEvents.java">ClientBlockEntityEvents</a><a class="headerlink" href="#clientblockentityevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>BLOCK_ENTITY_LOAD</li>
+<li>BLOCK_ENTITY_UNLOAD</li>
+</ul>
+<h4 id="clientchunkevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-lifecycle-events-v1/src/client/java/net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientChunkEvents.java">ClientChunkEvents</a><a class="headerlink" href="#clientchunkevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>CHUNK_LOAD</li>
+<li>CHUNK_UNLOAD</li>
+</ul>
+<h4 id="clientconfigurationconnectionevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-networking-api-v1/src/client/java/net/fabricmc/fabric/api/client/networking/v1/ClientConfigurationConnectionEvents.java">ClientConfigurationConnectionEvents</a><a class="headerlink" href="#clientconfigurationconnectionevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>INIT</li>
+<li>READY</li>
+<li>DISCONNECT</li>
+</ul>
+<h4 id="cliententityevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-lifecycle-events-v1/src/client/java/net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientEntityEvents.java">ClientEntityEvents</a><a class="headerlink" href="#cliententityevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ENTITY_LOAD</li>
+<li>ENTITY_UNLOAD</li>
+</ul>
+<h4 id="clientlifecycleevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-lifecycle-events-v1/src/client/java/net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientLifecycleEvents.java">ClientLifecycleEvents</a><a class="headerlink" href="#clientlifecycleevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>CLIENT_STARTED</li>
+<li>CLIENT_STOPPING</li>
+</ul>
+<h4 id="clientloginconnectionevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-networking-api-v1/src/client/java/net/fabricmc/fabric/api/client/networking/v1/ClientLoginConnectionEvents.java">ClientLoginConnectionEvents</a><a class="headerlink" href="#clientloginconnectionevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>INIT</li>
+<li>QUERY_START</li>
+<li>DISCONNECT</li>
+</ul>
+<h4 id="clientplayconnectionevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-networking-api-v1/src/client/java/net/fabricmc/fabric/api/client/networking/v1/ClientPlayConnectionEvents.java">ClientPlayConnectionEvents</a><a class="headerlink" href="#clientplayconnectionevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>INIT</li>
+<li>JOIN</li>
+<li>DISCONNECT</li>
+</ul>
+<h4 id="clientreceivemessageevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-message-api-v1/src/client/java/net/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents.java">ClientReceiveMessageEvents</a><a class="headerlink" href="#clientreceivemessageevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ALLOW_CHAT</li>
+<li>ALLOW_GAME</li>
+<li>MODIFY_GAME</li>
+<li>CHAT</li>
+<li>GAME</li>
+<li>CHAT_CANCELED</li>
+<li>GAME_CANCELED</li>
+</ul>
+<h4 id="clientsendmessageevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-message-api-v1/src/client/java/net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents.java">ClientSendMessageEvents</a><a class="headerlink" href="#clientsendmessageevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ALLOW_CHAT</li>
+<li>ALLOW_COMMAND</li>
+<li>MODIFY_CHAT</li>
+<li>MODIFY_COMMAND</li>
+<li>CHAT</li>
+<li>COMMAND</li>
+<li>CHAT_CANCELED</li>
+<li>COMMAND_CANCELED</li>
+</ul>
+<h4 id="clienttickevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-lifecycle-events-v1/src/client/java/net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents.java">ClientTickEvents</a><a class="headerlink" href="#clienttickevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>START_CLIENT_TICK</li>
+<li>END_CLIENT_TICK</li>
+<li>START_WORLD_TICK</li>
+<li>END_WORLD_TICK</li>
+</ul>
+<h4 id="entityelytraevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-entity-events-v1/src/main/java/net/fabricmc/fabric/api/entity/event/v1/EntityElytraEvents.java">EntityElytraEvents</a><a class="headerlink" href="#entityelytraevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ALLOW</li>
+<li>CUSTOM</li>
+</ul>
+<h4 id="entitysleepevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-entity-events-v1/src/main/java/net/fabricmc/fabric/api/entity/event/v1/EntitySleepEvents.java">EntitySleepEvents</a><a class="headerlink" href="#entitysleepevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ALLOW_SLEEPING</li>
+<li>START_SLEEPING</li>
+<li>STOP_SLEEPING</li>
+<li>ALLOW_BED</li>
+<li>ALLOW_SLEEP_TIME</li>
+<li>ALLOW_NEARBY_MONSTERS</li>
+<li>ALLOW_RESETTING_TIME</li>
+<li>MODIFY_SLEEPING_DIRECTION</li>
+<li>ALLOW_SETTING_SPAWN</li>
+<li>SET_BED_OCCUPATION_STATE</li>
+<li>MODIFY_WAKE_UP_POSITION</li>
+</ul>
+<h4 id="entitytrackingevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-networking-api-v1/src/main/java/net/fabricmc/fabric/api/networking/v1/EntityTrackingEvents.java">EntityTrackingEvents</a><a class="headerlink" href="#entitytrackingevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>START_TRACKING</li>
+<li>STOP_TRACKING</li>
+</ul>
+<h4 id="loottableevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-loot-api-v2/src/main/java/net/fabricmc/fabric/api/loot/v2/LootTableEvents.java">LootTableEvents</a><a class="headerlink" href="#loottableevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>REPLACE</li>
+<li>MODIFY</li>
+<li>ALL_LOADED</li>
+</ul>
+<h4 id="modelloaderplugincontextimpl"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-model-loading-api-v1/src/client/java/net/fabricmc/fabric/impl/client/model/loading/ModelLoaderPluginContextImpl.java">ModelLoaderPluginContextImpl</a><a class="headerlink" href="#modelloaderplugincontextimpl" title="Permanent link">&para;</a></h4>
+<ul>
+<li>modelResolvers</li>
+<li>onLoadModifiers</li>
+<li>beforeBakeModifiers</li>
+<li>afterBakeModifiers</li>
+<li>legacyVariantProviders</li>
+</ul>
+<h4 id="playerblockbreakevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-events-interaction-v0/src/main/java/net/fabricmc/fabric/api/event/player/PlayerBlockBreakEvents.java">PlayerBlockBreakEvents</a><a class="headerlink" href="#playerblockbreakevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>BEFORE</li>
+<li>AFTER</li>
+<li>CANCELED</li>
+</ul>
+<h4 id="s2cconfigurationchannelevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-networking-api-v1/src/main/java/net/fabricmc/fabric/api/networking/v1/S2CConfigurationChannelEvents.java">S2CConfigurationChannelEvents</a><a class="headerlink" href="#s2cconfigurationchannelevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>REGISTER</li>
+<li>UNREGISTER</li>
+</ul>
+<h4 id="s2cplaychannelevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-networking-api-v1/src/main/java/net/fabricmc/fabric/api/networking/v1/S2CPlayChannelEvents.java">S2CPlayChannelEvents</a><a class="headerlink" href="#s2cplaychannelevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>REGISTER</li>
+<li>UNREGISTER</li>
+</ul>
+<h4 id="screenevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-screen-api-v1/src/client/java/net/fabricmc/fabric/api/client/screen/v1/ScreenEvents.java">ScreenEvents</a><a class="headerlink" href="#screenevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>BEFORE_INIT</li>
+<li>AFTER_INIT</li>
+</ul>
+<h4 id="serverblockentityevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-lifecycle-events-v1/src/main/java/net/fabricmc/fabric/api/event/lifecycle/v1/ServerBlockEntityEvents.java">ServerBlockEntityEvents</a><a class="headerlink" href="#serverblockentityevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>BLOCK_ENTITY_LOAD</li>
+<li>BLOCK_ENTITY_UNLOAD</li>
+</ul>
+<h4 id="serverchunkevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-lifecycle-events-v1/src/main/java/net/fabricmc/fabric/api/event/lifecycle/v1/ServerChunkEvents.java">ServerChunkEvents</a><a class="headerlink" href="#serverchunkevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>CHUNK_LOAD</li>
+<li>CHUNK_UNLOAD</li>
+</ul>
+<h4 id="serverconfigurationconnectionevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-networking-api-v1/src/main/java/net/fabricmc/fabric/api/networking/v1/ServerConfigurationConnectionEvents.java">ServerConfigurationConnectionEvents</a><a class="headerlink" href="#serverconfigurationconnectionevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>BEFORE_CONFIGURE</li>
+<li>CONFIGURE</li>
+<li>DISCONNECT</li>
+</ul>
+<h4 id="serverentityevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-lifecycle-events-v1/src/main/java/net/fabricmc/fabric/api/event/lifecycle/v1/ServerEntityEvents.java">ServerEntityEvents</a><a class="headerlink" href="#serverentityevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ENTITY_LOAD</li>
+<li>ENTITY_UNLOAD</li>
+<li>EQUIPMENT_CHANGE</li>
+</ul>
+<h4 id="serverentityworldchangeevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-entity-events-v1/src/main/java/net/fabricmc/fabric/api/entity/event/v1/ServerEntityWorldChangeEvents.java">ServerEntityWorldChangeEvents</a><a class="headerlink" href="#serverentityworldchangeevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>AFTER_ENTITY_CHANGE_WORLD</li>
+<li>AFTER_PLAYER_CHANGE_WORLD</li>
+</ul>
+<h4 id="serverlifecycleevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-lifecycle-events-v1/src/main/java/net/fabricmc/fabric/api/event/lifecycle/v1/ServerLifecycleEvents.java">ServerLifecycleEvents</a><a class="headerlink" href="#serverlifecycleevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>SERVER_STARTING</li>
+<li>SERVER_STARTED</li>
+<li>SERVER_STOPPING</li>
+<li>SERVER_STOPPED</li>
+<li>SYNC_DATA_PACK_CONTENTS</li>
+<li>START_DATA_PACK_RELOAD</li>
+<li>END_DATA_PACK_RELOAD</li>
+<li>BEFORE_SAVE</li>
+<li>AFTER_SAVE</li>
+</ul>
+<h4 id="serverlivingentityevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-entity-events-v1/src/main/java/net/fabricmc/fabric/api/entity/event/v1/ServerLivingEntityEvents.java">ServerLivingEntityEvents</a><a class="headerlink" href="#serverlivingentityevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ALLOW_DAMAGE</li>
+<li>ALLOW_DEATH</li>
+<li>AFTER_DEATH</li>
+<li>MOB_CONVERSION</li>
+</ul>
+<h4 id="serverloginconnectionevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-networking-api-v1/src/main/java/net/fabricmc/fabric/api/networking/v1/ServerLoginConnectionEvents.java">ServerLoginConnectionEvents</a><a class="headerlink" href="#serverloginconnectionevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>INIT</li>
+<li>QUERY_START</li>
+<li>DISCONNECT</li>
+</ul>
+<h4 id="servermessageevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-message-api-v1/src/main/java/net/fabricmc/fabric/api/message/v1/ServerMessageEvents.java">ServerMessageEvents</a><a class="headerlink" href="#servermessageevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ALLOW_CHAT_MESSAGE</li>
+<li>ALLOW_GAME_MESSAGE</li>
+<li>ALLOW_COMMAND_MESSAGE</li>
+<li>CHAT_MESSAGE</li>
+<li>GAME_MESSAGE</li>
+<li>COMMAND_MESSAGE</li>
+</ul>
+<h4 id="serverplayconnectionevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-networking-api-v1/src/main/java/net/fabricmc/fabric/api/networking/v1/ServerPlayConnectionEvents.java">ServerPlayConnectionEvents</a><a class="headerlink" href="#serverplayconnectionevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>INIT</li>
+<li>JOIN</li>
+<li>DISCONNECT</li>
+</ul>
+<h4 id="serverplayerevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-entity-events-v1/src/main/java/net/fabricmc/fabric/api/entity/event/v1/ServerPlayerEvents.java">ServerPlayerEvents</a><a class="headerlink" href="#serverplayerevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>COPY_FROM</li>
+<li>AFTER_RESPAWN</li>
+<li>ALLOW_DEATH</li>
+</ul>
+<h4 id="servertickevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-lifecycle-events-v1/src/main/java/net/fabricmc/fabric/api/event/lifecycle/v1/ServerTickEvents.java">ServerTickEvents</a><a class="headerlink" href="#servertickevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>START_SERVER_TICK</li>
+<li>END_SERVER_TICK</li>
+<li>START_WORLD_TICK</li>
+<li>END_WORLD_TICK</li>
+</ul>
+<h4 id="serverworldevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-lifecycle-events-v1/src/main/java/net/fabricmc/fabric/api/event/lifecycle/v1/ServerWorldEvents.java">ServerWorldEvents</a><a class="headerlink" href="#serverworldevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>LOAD</li>
+<li>UNLOAD</li>
+</ul>
+<h4 id="worldrenderevents"><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-rendering-v1/src/client/java/net/fabricmc/fabric/api/client/rendering/v1/WorldRenderEvents.java">WorldRenderEvents</a><a class="headerlink" href="#worldrenderevents" title="Permanent link">&para;</a></h4>
+<ul>
+<li>START</li>
+<li>AFTER_SETUP</li>
+<li>BEFORE_ENTITIES</li>
+<li>AFTER_ENTITIES</li>
+<li>BEFORE_BLOCK_OUTLINE</li>
+<li>BLOCK_OUTLINE</li>
+<li>BEFORE_DEBUG_RENDER</li>
+<li>AFTER_TRANSLUCENT</li>
+<li>LAST</li>
+<li>END</li>
+</ul>
+<h3 id="non-grouped-events">Non-grouped events<a class="headerlink" href="#non-grouped-events" title="Permanent link">&para;</a></h3>
+<hr />
+<ul>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-events-interaction-v0/src/main/java/net/fabricmc/fabric/api/event/player/AttackBlockCallback.java">AttackBlockCallback.EVENT</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-events-interaction-v0/src/main/java/net/fabricmc/fabric/api/event/player/AttackEntityCallback.java">AttackEntityCallback.EVENT</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-command-api-v2/src/client/java/net/fabricmc/fabric/api/client/command/v2/ClientCommandRegistrationCallback.java">ClientCommandRegistrationCallback.EVENT</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-events-interaction-v0/src/client/java/net/fabricmc/fabric/api/event/client/player/ClientPickBlockApplyCallback.java">ClientPickBlockApplyCallback.EVENT</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-events-interaction-v0/src/client/java/net/fabricmc/fabric/api/event/client/player/ClientPickBlockGatherCallback.java">ClientPickBlockGatherCallback.EVENT</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-events-interaction-v0/src/client/java/net/fabricmc/fabric/api/event/client/player/ClientPlayerBlockBreakEvents.java">ClientPlayerBlockBreakEvents.AFTER</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-events-interaction-v0/src/client/java/net/fabricmc/fabric/api/event/client/player/ClientPreAttackCallback.java">ClientPreAttackCallback.EVENT</a></li>
+<li>[CombinedProvidersImpl<span class="arithmatex">\(Provider.event](https://github.com/FabricMC/fabric/tree/1.20.4/fabric-transfer-api-v1/src/main/java/net/fabricmc/fabric/impl/transfer/fluid/CombinedProvidersImpl\)</span>Provider.java)</li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-command-api-v2/src/main/java/net/fabricmc/fabric/api/command/v2/CommandRegistrationCallback.java">CommandRegistrationCallback.EVENT</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-lifecycle-events-v1/src/main/java/net/fabricmc/fabric/api/event/lifecycle/v1/CommonLifecycleEvents.java">CommonLifecycleEvents.TAGS_LOADED</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-rendering-v1/src/client/java/net/fabricmc/fabric/api/client/rendering/v1/CoreShaderRegistrationCallback.java">CoreShaderRegistrationCallback.EVENT</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-registry-sync-v0/src/main/java/net/fabricmc/fabric/api/event/registry/DynamicRegistrySetupCallback.java">DynamicRegistrySetupCallback.EVENT</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-transfer-api-v1/src/main/java/net/fabricmc/fabric/api/transfer/v1/fluid/FluidStorage.java">FluidStorage.GENERAL_COMBINED_PROVIDER</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-rendering-v1/src/client/java/net/fabricmc/fabric/api/client/rendering/v1/HudRenderCallback.java">HudRenderCallback.EVENT</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-rendering-v1/src/client/java/net/fabricmc/fabric/api/client/rendering/v1/InvalidateRenderStateCallback.java">InvalidateRenderStateCallback.EVENT</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-item-group-api-v1/src/main/java/net/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents.java">ItemGroupEvents.MODIFY_ENTRIES_ALL</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-item-api-v1/src/client/java/net/fabricmc/fabric/api/client/item/v1/ItemTooltipCallback.java">ItemTooltipCallback.EVENT</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-rendering-v1/src/client/java/net/fabricmc/fabric/api/client/rendering/v1/LivingEntityFeatureRenderEvents.java">LivingEntityFeatureRenderEvents.ALLOW_CAPE_RENDER</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-rendering-v1/src/client/java/net/fabricmc/fabric/api/client/rendering/v1/LivingEntityFeatureRendererRegistrationCallback.java">LivingEntityFeatureRendererRegistrationCallback.EVENT</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-item-api-v1/src/main/java/net/fabricmc/fabric/api/item/v1/ModifyItemAttributeModifiersCallback.java">ModifyItemAttributeModifiersCallback.EVENT</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-particles-v1/src/client/java/net/fabricmc/fabric/api/client/particle/v1/ParticleRenderEvents.java">ParticleRenderEvents.ALLOW_BLOCK_DUST_TINT</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-entity-events-v1/src/main/java/net/fabricmc/fabric/api/entity/event/v1/ServerEntityCombatEvents.java">ServerEntityCombatEvents.AFTER_KILLED_OTHER_ENTITY</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-message-api-v1/src/main/java/net/fabricmc/fabric/api/message/v1/ServerMessageDecoratorEvent.java">ServerMessageDecoratorEvent.EVENT</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-rendering-v1/src/client/java/net/fabricmc/fabric/api/client/rendering/v1/TooltipComponentCallback.java">TooltipComponentCallback.EVENT</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-events-interaction-v0/src/main/java/net/fabricmc/fabric/api/event/player/UseBlockCallback.java">UseBlockCallback.EVENT</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-events-interaction-v0/src/main/java/net/fabricmc/fabric/api/event/player/UseEntityCallback.java">UseEntityCallback.EVENT</a></li>
+<li><a href="https://github.com/FabricMC/fabric/tree/1.20.4/fabric-events-interaction-v0/src/main/java/net/fabricmc/fabric/api/event/player/UseItemCallback.java">UseItemCallback.EVENT</a></li>
+</ul>
+<h3 id="deprecated-events">Deprecated events<a class="headerlink" href="#deprecated-events" title="Permanent link">&para;</a></h3>
+<hr />
+<ul>
+<li><s>ClientPickBlockCallback.EVENT</s></li>
+<li><s>ClientTickCallback.EVENT</s></li>
+<li><s>CommandRegistrationCallback.EVENT</s></li>
+<li><s>InvalidateRenderStateCallback.EVENT</s></li>
+<li><s>ItemTooltipCallback.EVENT</s></li>
+<li><s>LivingEntityFeatureRendererRegistrationCallback.EVENT</s></li>
+<li><s>ServerStartCallback.EVENT</s></li>
+<li><s>ServerStopCallback.EVENT</s></li>
+<li><s>ServerTickCallback.EVENT</s></li>
+<li><s>WorldTickCallback.EVENT</s></li>
+</ul>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-10-13T19:55:46+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-10-13</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../data-attributes/home/" class="md-footer__link md-footer__link--next" aria-label="Next: Home" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Home
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Documentation by <a style="color: #13A6F0;" href="https://github.com/pokesmells">Poke</a>, with assistance from the Bare Minimum Team.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://discord.com/invite/pcRw79hwey" target="_blank" rel="noopener" title="discord.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/BareMinimumStudios" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["search.suggest", "search.highlight", "search.share", "navigation.indexes", "navigation.expand", "navigation.top", "navigation.tracking", "navigation.tabs", "navigation.sections", "header.autohide", "navigation.footer", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.code.select", "content.tooltips"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.2fe552df.min.js"></script>
+      
+        <script src="../js/timeago.min.js"></script>
+      
+        <script src="../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../search/main.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>
