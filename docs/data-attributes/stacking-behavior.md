@@ -1,5 +1,5 @@
 ---
-title: Stacking Behavior
+title: Stacking Formula
 project: data-attributes
 ---
 !!! abstract ""

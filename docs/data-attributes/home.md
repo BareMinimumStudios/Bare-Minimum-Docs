@@ -14,7 +14,10 @@ project: data-attributes
 
 !!! abstract ""
     #### What is Data Attributes?
-    Initially released for Minecraft 1.17.1 via the Fabric ecosystem, serves two main purposes: it revamps Minecraft's entity attribute system to be more flexible and inclusive of follow-on attributes, a feature common in many other games. Additionally, it enables the manipulation of entity attributes through datapacks, offering server and pack creators straightforward customization of every facet of the entity attribute system.
+    Initially released for Minecraft 1.17.1 via the Fabric ecosystem, serves two main purposes:
+
+    - Revamps Minecraft's entity attribute system to be more flexible and inclusive of follow-on attributes, a feature common in many other games.
+    - Enables the manipulation of entity attributes through data-packs and a main configuration, offering server and pack creators straightforward customization of every facet of the entity attribute system.
 
 - ### Integrating Data Attributes
 
@@ -65,9 +68,13 @@ Then, declare the dependency inside your `dependencies` block and as well as the
 
 If you want to use a version other than the most current one, check the [GitHub releases page](https://github.com/CleverNucleus/data-attributes/releases/)
 
-- ### Specific Capabilities
+- ### Capabilities
 
-Data Attributes allows you to customize all attributes using datapacks. It achieves this by separating attributes from the game instance and making them specific to each world. This means that attributes are not loaded or defined until a world is loaded, which offers greater flexibility and customization. This approach is significant because it changes how Minecraft handles attributes.
+The mod allows customization of attributes and how they behave through configuration files and data-packs.
+Users of the mod can construct data-packs that are mod or world specific, while server hosts and individual players can utilize the config to adjust values that they want, and have them synchronize across all worlds in the instance.
+
+The way attributes are handled are changed through this mod, allowing for greater flexibility by changing and adding minimum and maximum ranges. 
+Using the new config interface, users can add new entries with ease, and adjust values while in-game.
 
 - #### Attributes in Vanilla Minecraft
 
@@ -104,12 +111,20 @@ However, default attribute containers are immutable, as previously mentioned. Th
 
 - #### Changes and Implementation
 
-Although all attributes are as functional as each other in-game, some are added differently under the hood. Data Attributes splits attributes into two types: data driven, and hard coded. The latter refers not just to vanilla attributes, but to all modded ones as well `(so long as they are, well, hard coded).` 
+Although all attributes are as functional as each other in-game, some are added differently under the hood.
+As of Data Attributes `2.*.*` and above, attributes that are **statically registered** are usually the only ones that are meant to be targeted, due to concerns with instability on dynamically unregistering attributes.
 
-Data driven attributes refers to those added through datapacks `(json files)`. The difference between these is that the hard coded attributes remain loaded for every world, and are not ever unregistered. This means that when using an attribute object reference in the code, the object existing in the registry is the same as the object in any given `attribute container`, or `attribute instance` etc. 
+Changes to attributes through either the config, or data-packs can be reloaded while in an instance.
 
-Whereas the data driven attribute is `world-dependent` and can be `unregistered` and `resynced`, meaning that the object existing in the registry is not always the same as the object existing in any given attribute container or similar.
+- ##### Singleplayer Instances
+An individual in their own world can make changes on the interface or config directly through the `json` files, and use the `/reload` command.
 
-To get around this issue, Data Attributes uses identifiers `(Identifier)` to hold attributes in attribute containers or attribute instances etc. While the attribute _object_ may change, the attribute _identifier_ does not, even on reload and resync. 
+- ##### Server/Multiplayer Instances
+A server maintainer or owner can make changes through the config `json`, and use the `/reload` command.
 
-This is at the core of what Data Attributes does: it simply changes the `attributes system` to use the attribute `identifier` instead of the attribute _object_, thereby allowing a fully dynamic, data driven attributes system.
+By using the `/reload` command, data-attributes will reload all configurations to reflect the updated config and apply the needed changes.
+For data-packs, any adjustments to them will also be applied. Data-packs are secondary to the main config, and can be overwritten by it.
+
+Data Attributes also uses **attribute ids** to hold attributes in attribute containers or attribute instances etc. While the attribute _object_ may change, the **id** does not, even on reload and resync. 
+
+!!! note "This is at the core of what Data Attributes does: it mixes into attributes and their instances, exposing their ability to have their behaviors and ranges changed, allowing a fully dynamic, data-driven attributes system."
